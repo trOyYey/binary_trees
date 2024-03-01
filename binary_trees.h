@@ -51,4 +51,7 @@ size_t measure_tree_size(const binary_tree_t *tree);
 size_t measure_size(const binary_tree_t *tree);
 size_t tree_height(const binary_tree_t *tree);
 
+/** Advanced tasks **/
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
+				     const binary_tree_t *second);
 #endif
