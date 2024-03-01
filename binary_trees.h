@@ -50,8 +50,11 @@ void binary_tree_print(const binary_tree_t *);
 size_t measure_tree_size(const binary_tree_t *tree);
 size_t measure_size(const binary_tree_t *tree);
 size_t tree_height(const binary_tree_t *tree);
+void leveling_list(const binary_tree_t *tree, int x, int **list);
 
 /** Advanced tasks **/
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 				     const binary_tree_t *second);
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+
 #endif
