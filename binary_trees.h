@@ -52,6 +52,7 @@ size_t measure_size(const binary_tree_t *tree);
 size_t tree_height(const binary_tree_t *tree);
 void leveling_list(const binary_tree_t *tree, int x, int **list);
 int is_complete(const binary_tree_t *tree, int index, int size);
+int IS_BTS(const binary_tree_t *tree, int *min, int *max);
 
 /** Advanced tasks **/
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
@@ -60,5 +61,6 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 int binary_tree_is_complete(const binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+int binary_tree_is_bst(const binary_tree_t *tree);
 
 #endif
