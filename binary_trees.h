@@ -61,6 +61,7 @@ bst_t *is_parent(bst_t *tree, int value);
 bst_t *replacing(const bst_t *tree, int value, int left);
 void swapping(bst_t *prev_node, bst_t *new_node);
 int is_avl(const binary_tree_t *tree);
+avl_t *avl_rotate(avl_t **root);
 
 /** Advanced tasks **/
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
@@ -75,5 +76,6 @@ bst_t *array_to_bst(int *array, size_t size);
 bst_t *bst_search(const bst_t *tree, int value);
 bst_t *bst_remove(bst_t *root, int value);
 int binary_tree_is_avl(const binary_tree_t *tree);
+avl_t *avl_insert(avl_t **tree, int value);
 
 #endif
