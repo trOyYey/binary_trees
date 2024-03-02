@@ -56,10 +56,11 @@ size_t measure_size(const binary_tree_t *tree);
 size_t tree_height(const binary_tree_t *tree);
 void leveling_list(const binary_tree_t *tree, int x, int **list);
 int is_complete(const binary_tree_t *tree, int index, int size);
-int IS_BTS(const binary_tree_t *tree, int *min, int *max);
+int IS_BST(const binary_tree_t *tree, int *min, int *max);
 bst_t *is_parent(bst_t *tree, int value);
 bst_t *replacing(const bst_t *tree, int value, int left);
 void swapping(bst_t *prev_node, bst_t *new_node);
+int is_avl(const binary_tree_t *tree);
 
 /** Advanced tasks **/
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
@@ -73,5 +74,6 @@ bst_t *bst_insert(bst_t **tree, int value);
 bst_t *array_to_bst(int *array, size_t size);
 bst_t *bst_search(const bst_t *tree, int value);
 bst_t *bst_remove(bst_t *root, int value);
+int binary_tree_is_avl(const binary_tree_t *tree);
 
 #endif

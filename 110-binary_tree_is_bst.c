@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * IS_BTS - checks the left side if smaller than root,
+ * IS_BST - checks the left side if smaller than root,
  *			and right side if bigger than root
  * @tree: tree pointer
  * @max: pointer to maximum value n if tree is bts
@@ -9,14 +9,14 @@
  * Return: 1 for success and 0 for failure
  */
 
-int IS_BTS(const binary_tree_t *tree, int *min, int *max)
+int IS_BST(const binary_tree_t *tree, int *min, int *max)
 {
 	if (tree == NULL)
 		return (1);
 	if ((max != NULL && tree->n >= *max) || (min != NULL && tree->n <= *min))
 		return (0);
-	return (IS_BTS(tree->left, min, (int *) &tree->n) &&
-			IS_BTS(tree->right, (int *) &tree->n, max));
+	return (IS_BST(tree->left, min, (int *) &tree->n) &&
+			IS_BST(tree->right, (int *) &tree->n, max));
 }
 
 /**
@@ -29,5 +29,5 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
-	return (IS_BTS(tree, NULL, NULL));
+	return (IS_BST(tree, NULL, NULL));
 }
