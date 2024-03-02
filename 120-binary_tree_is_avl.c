@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * IS_BTS - checks the left side if smaller than root,
+ * IS_BST - checks the left side if smaller than root,
  *			and right side if bigger than root
  * @tree: tree pointer
  * @max: pointer to maximum value n if tree is bts
