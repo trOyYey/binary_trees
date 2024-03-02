@@ -39,10 +39,10 @@ bst_t *bst_search(const bst_t *tree, int value)
 
 bst_t *replacing(const bst_t *tree, int value, int left)
 {
-	if ((left && tree->right == NULL) ||
-		(left == NULL && tree->left == NULL))
+	if ((left != 0 && tree->right == NULL) ||
+		(left == 0 && tree->left == NULL))
 		return ((bst_t *) tree);
-	if (left != NULL)
+	if (left != 0)
 		return (replacing(tree->right, value, left));
 	return (replacing(tree->left, value, left));
 }
